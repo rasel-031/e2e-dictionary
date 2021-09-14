@@ -1,0 +1,146 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
+$fm: "Roboto", sans-serif;
+$clr-w: white;
+$clr-c: crimson;
+$bg-clr: whitesmoke;
+$pd: 25px;
+$bs: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+.App-nav {
+  text-align: center;
+  background-color: $clr-c;
+  padding: 0;
+  margin: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  img {
+    height: 50px;
+    width: 50px;
+  }
+  h2 {
+    color: $clr-w;
+    padding: 12px;
+    margin: 0;
+    font-family: $fm;
+    letter-spacing: 2px;
+  }
+}
+.App-output {
+  background-color: $bg-clr;
+}
+
+.directory-container {
+  background-color: $clr-w;
+  margin: 10vh 15vw;
+  height: auto;
+  .search-div {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: $bg-clr;
+    height: 100px;
+    align-items: center;
+
+    .searchTerm {
+      box-shadow: $bs;
+      width: 70%;
+      border: 2px solid $clr-c;
+      border-right: none;
+      padding: 5px 15px;
+      height: 25px;
+      border-bottom-left-radius: 20px;
+      border-top-left-radius: 20px;
+      outline: none;
+      color: #9dbfaf;
+    }
+    .searchTerm:focus {
+      color: $clr-c;
+    }
+    .searchButton {
+      width: 50px;
+      height: 39px;
+      border: 2px solid $clr-c;
+      border-left: none;
+      background: $clr-c;
+      text-align: center;
+      color: rgb(0, 0, 0);
+      border-bottom-right-radius: 20px;
+      border-top-right-radius: 20px;
+      cursor: pointer;
+      font-size: 15px;
+    }
+  }
+
+  .search-output-container {
+    box-shadow: $bs;
+    padding: 4vh 3vw;
+    h1 {
+      display: flex;
+      align-items: center;
+      margin: 0;
+      padding: 0;
+      text-transform: capitalize;
+      font-family: $fm;
+      font-weight: bold;
+      span {
+        font-size: 18px;
+      }
+      .volume-btn {
+        font-size: 22px;
+        cursor: pointer;
+      }
+      .volume-btn:hover {
+        color: $clr-c;
+      }
+    }
+    .not-word-defination-container {
+      display: none;
+    }
+    .word-defination-container {
+      display: block;
+      .word-defination {
+        margin: 0;
+        padding: 0;
+        h3 {
+          color: $clr-c;
+        }
+        .example-text {
+          text-transform: initial;
+          color: rgb(95, 93, 93);
+        }
+      }
+    }
+
+    .word-title {
+      display: none;
+    }
+    .result-found {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+
+      h1 {
+        padding: 0;
+        margin: 0;
+        color: rgb(190, 182, 184);
+        text-transform: initial;
+      }
+    }
+    .no-result-found {
+      display: none;
+    }
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .directory-container {
+    background-color: $clr-w;
+    margin: 10vh 5vw;
+    height: auto;
+  }
+}
